@@ -1,0 +1,180 @@
+html, body {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  height: 100%;
+  margin: 8px;
+  padding: 0px;
+  font-family: "Snell Roundhand"; 
+ background-color: rgb(244, 248, 252) ;
+   
+} 
+.total {  
+  flex-direction: row;
+  height: 80%;
+  background-color: rgb(244, 248, 252) ; 
+
+}
+.cover img{ 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px; 
+    height: 200px; 
+border-radius: 50%;
+} 
+.cover span{
+ display: block; 
+	text-align: center; 
+    margin-left: auto;
+    margin-right: auto;
+text-align: center; 
+width: 600px; 
+
+} 
+
+::selection{
+background: rgb(255,156,91);
+color: white;  
+} 
+
+
+p, span{ 
+font-size: 20px; 
+} 
+
+.cover h1{ 
+font-family: "Brush Script MT";
+font-size: 84px; 
+    margin-left: auto;
+    margin-right: auto;
+text-align: center; 
+width: 50%; 
+color: rgb(255,156,91); 
+} 
+
+.column2 {
+    float: left; 
+    width: 12.5%;
+}
+.column {
+    float: left; 
+    width: 25%;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+@media screen and (max-width: 1080px) {
+    .column {
+        width: 100%;
+    }
+}
+
+#heads { 
+width: 80% ; 
+border-radius: 5%;
+} 
+#heads2 { 
+width: 80% ; 
+border-radius: 5%;
+} 
+#heads3 { 
+width: 80% ; 
+border-radius: 5%;
+} 
+#left h1{ 
+font-family: "Brush Script MT";
+text-align: center; 
+color: rgb(255,156,91);
+font-size: 50px;
+} 
+#left h2{ 
+font-family: "Brush Script MT";
+text-align: center; 
+color: rgb(255,156,91);
+font-size: 40px; 
+} 
+#left p{
+text-align: center;
+width: 100% ;
+} 
+
+#center h1{ 
+font-family: "Brush Script MT";
+text-align: center; 
+color: rgb(255,156,91);
+font-size: 50px;
+} 
+#center h2{ 
+font-family: "Brush Script MT";
+text-align: center; 
+color: rgb(255,156,91);
+font-size: 40px;
+} 
+#center p{
+text-align: center; 
+width: 100% ;
+} 
+#right h1{ 
+font-family: "Brush Script MT";
+text-align: center; 
+width: 90%; 
+color: rgb(255,156,91);
+font-size: 50px;
+} 
+#right h2{ 
+font-family: "Brush Script MT";
+text-align: center; 
+color: rgb(255,156,91);
+font-size: 40px;
+} 
+#right p{
+text-align: justify; 
+width: 90% ;
+} 
+#right span{
+text-align: center; 
+width: 100% ;
+} 
+
+a:hover{ 
+background-color: rgb(255,156,91); 
+}
+a:link {
+    text-decoration: none;
+}
+a{ 
+color: black; 
+} 
+
+.upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.btn {
+  border: 2px solid gray;
+  color: gray;
+  background-color: white;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: bold;
+  width: 90%; 
+  margin-left: auto; 
+  margin-right: auto; 
+
+
+}
+
+.upload-btn-wrapper input[type=file] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+border-radius: 8px;
+}
