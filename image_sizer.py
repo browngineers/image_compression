@@ -1,4 +1,4 @@
-import PIL,  resizeimage, glob, os
+import PIL, resizeimage, glob, os
 from PIL import Image as IMG
 from resizeimage import resizeimage
 pics = sorted(glob.glob('DSC_*.JPG'))  # input picture files are .JPG
