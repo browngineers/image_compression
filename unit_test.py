@@ -26,6 +26,9 @@ class TestImageSizer(unittest.TestCase):
         pics = os.listdir(directory)
         self.assertTrue(len(pics) > 0)
 
+    def test_file_add(self):
+        self.assertTrue(True, True)
+
 
 
 if __name__ == '__main__':
