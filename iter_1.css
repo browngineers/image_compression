@@ -19,9 +19,9 @@ html, body {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 200px; 
-    height: 200px; 
-border-radius: 50%;
+    width: 700px; 
+    height: 450px; 
+border-radius: 2%;
 } 
 .cover span{
  display: block; 
@@ -55,11 +55,11 @@ color: rgb(255,156,91);
 
 .column2 {
     float: left; 
-    width: 12.5%;
+    width: 10%;
 }
 .column {
     float: left; 
-    width: 25%;
+    width: 26.67%;
 }
 .row:after {
     content: "";

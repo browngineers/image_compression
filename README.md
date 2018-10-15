@@ -1,2 +1,2 @@
 # image_compression
-project 1.....2???? 
+project 1 - image compression
