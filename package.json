@@ -1,0 +1,19 @@
+{
+  "name": "image_compression",
+  "version": "1.0.0",
+  "description": "project 1 - image compression",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/browngineers/image_compression.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/browngineers/image_compression/issues"
+  },
+  "homepage": "https://github.com/browngineers/image_compression#readme"
+}
