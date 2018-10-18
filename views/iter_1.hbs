@@ -56,11 +56,11 @@
 
 			<p>entry form to send images to backend<br/><br/><br/>
 			  <button class="btn">Upload a file</button><br/>
-  <input type="file" name="myfile" />
 
-
-
-
+			  <form action="/upload" method="post">
+   	  			<input type="file" name="pic" accept="image/*">
+   				<input type="submit">
+ 			  </form>
 			</p>
 		</div>
 		<div class="column" id='right'>

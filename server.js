@@ -24,30 +24,10 @@ app.get('/', function(req, res) {
     res.render('iter_1')
 })
 
-app.get('/python-test', function(req, res) {
-    // Use child_process.spawn method from
-    // child_process module and assign it
-    // to variable spawn
-    const spawn = require("child_process").spawn;
+app.post('/upload', function(req, res) {
+  console.log(req.files); // the uploaded file object
+});
 
-    // Parameters passed in spawn -
-    // 1. type_of_script
-    // 2. list containing Path of the script
-    //    and arguments for the script
-
-    // E.g : http://localhost:3000/name?firstname=Mike&lastname=Will
-    // so, first name = Mike and last name = Will
-    const process = spawn('python',["./python_methods/hello.py",
-                            req.query.firstname,
-                            req.query.lastname] );
-
-    // Takes stdout data from script which executed
-    // with arguments and send this data to res object
-    process.stdout.on('data', function(data) {
-        res.send(data.toString());
-    } )
-    }
-})
 
 app.listen(3000, function(err) {
     if(err) {
