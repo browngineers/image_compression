@@ -18,6 +18,7 @@
   "homepage": "https://github.com/browngineers/image_compression#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
+    "child_process": "^1.0.2",
     "express": "^4.16.4",
     "express-fileupload": "^1.0.0",
     "express-handlebars": "^3.0.0"
