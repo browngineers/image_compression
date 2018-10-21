@@ -5,14 +5,20 @@ const fileUpload = require('express-fileupload');
 const app = express()
 
 
+
+
+
+
+
+
 // HBS setup
 const hbs = require('express-handlebars')({
-  extname: '.hbs'
+  extname: '.html'
 });
 
-app.engine('hbs', hbs);
+app.engine('html', hbs);
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'hbs');
+app.set('view engine', 'html');
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(fileUpload());
@@ -21,7 +27,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.get('/', function(req, res) {
-    res.render('iter_1')
+    res.render('final_home')
 })
 
 app.post('/upload', function(req, res) {
