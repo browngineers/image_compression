@@ -1,5 +1,3 @@
-
-
 var uploader = document.getElementById('uploader');
 var fileButton = document.getElementById('fileButton');
 var database = firebase.database();
@@ -29,6 +27,7 @@ fileButton.addEventListener('change', function(e) {
     },
 
     function complete() {
+
 
     }
   );
