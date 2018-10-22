@@ -1,8 +1,8 @@
-import PIL,  resizeimage, glob, os
+import PIL, resizeimage, glob, os, sys
 from PIL import Image as IMG
 from PIL import ImageFilter
 from resizeimage import resizeimage
-pics = sorted(glob.glob('DSC_*.JPG'))  # input picture files are .JPG
+pics = sorted(glob.glob('*.jpg'))  # input picture files are .JPG
 
 
 def createFolder(directory):  # create folder to hold resized images within current folder
