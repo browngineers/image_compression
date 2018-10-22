@@ -36,11 +36,7 @@ console.log('images/' + file.name);
                 url: '/filter',
                 data: {'url': url, name: file.name},
                 success: function(data) {
-                    console.log('here we are');
-                    $.ajax({
-                        type: "GET",
-                        url: `/download?name=${file.name}`
-                    });
+                    window.open(`/download?name=${file.name}`)
                 }
               });
         }).catch(function(error) {
