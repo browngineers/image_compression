@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
 const download = require('image-downloader')
-const axios = require('axios')
+const fs = require('fs')
 const firebase = require('firebase')
 const spawn = require("child_process").spawn;
 
@@ -35,23 +35,23 @@ app.get('/', function(req, res) {
 app.post('/filter', async function(req, res) {
     const url = req.body.url
     const name = req.body.name
-    const image = await axios.get(url)
 
-    await download.image({url: url, dest: `./python_methods/${name}`}).then(({filename, image}) => {
+    await download.image({url: url, dest: `./${name}`}).then(({filename, image}) => {
         console.log('File saved to', filename)
     })
     .catch((err) => {
         console.error(err)
     })
+    const pythonProcess = await spawn('python',["./image_sizer.py"]);
 
-    const pythonProcess = spawn('python',["./python_methods/image_sizer.py"]);
-
-    pythonProcess.stdout.on('data', (data) => {
-        console.log(data.toString());
-    });
-
-
+    res.sendStatus(200)
 });
+
+app.get('/download', async function(req, res) {
+    const name = req.query.name
+    const newImage = `./BW_${name}`
+    res.download(newImage)
+})
 
 
 app.listen(3000, function(err) {

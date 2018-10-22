@@ -17,7 +17,6 @@ def resize_all():  # resize JPG images in the same folder as image_sizer.py
     for pic in pics:
         print('working on ' + pic)
         bw(pic) # convert ot BW
-        sharp(pic) # add gaussian blur
         with open(pic, 'r+b') as f:
             with IMG.open(f) as picture:
                 new_name = 'resized_' + str(pic) + ".jpg" # saving as .jpg
@@ -52,7 +51,7 @@ def move_files():  # move resized files to their own folder within main folder
 def bw(pic):  # black and white
     bw = IMG.open(pic)
     bw = bw.convert('1') # convert to BW
-    bw.save('BW_' + str(pic) + '.jpg') # save as jpg
+    bw.save('BW_' + str(pic)) # save as jpg
     return
 
 
@@ -68,6 +67,9 @@ def main():
     createFolder('./ig_size/')
     resize_all()
     move_files()
+
+    print('Finished program')
+    sys.stdout.flush()
 
 
 main()
