@@ -1,9 +1,13 @@
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
-const fileUpload = require('express-fileupload');
-const app = express()
+const download = require('image-downloader')
+const axios = require('axios')
+const firebase = require('firebase')
+const spawn = require("child_process").spawn;
 
+
+const app = express()
 
 // HBS setup
 const hbs = require('express-handlebars')({
@@ -15,17 +19,32 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(fileUpload());
-
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.get('/', function(req, res) {
-    res.render('iter_1')
+    res.render('final_home')
 })
 
-app.post('/upload', function(req, res) {
-  console.log(req.files); // the uploaded file object
+app.post('/filter', async function(req, res) {
+    const url = req.body.url
+    const name = req.body.name
+    const image = await axios.get(url)
+
+    await download.image({url: url, dest: `./python_methods/${name}`}).then(({filename, image}) => {
+        console.log('File saved to', filename)
+    })
+    .catch((err) => {
+        console.error(err)
+    })
+
+    const pythonProcess = spawn('python',["./python_methods/image_sizer.py"]);
+
+    pythonProcess.stdout.on('data', (data) => {
+        console.log(data.toString());
+    });
+
+
 });
 
 
