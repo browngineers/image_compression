@@ -11,6 +11,7 @@ fileButton.addEventListener('change', function(e) {
 
 console.log('images/' + file.name);
 
+
   // Upload file
   var task = storageRef.put(file);
 

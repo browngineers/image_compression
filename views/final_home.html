@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+  
   <head>
 
     <meta charset="utf-8">
@@ -82,9 +83,14 @@
 			  <h2 class="display-4">Image Compression</h2>
               <p>Automated For You.</p>
 			  <p>Upload a folder of you images with the format "DSC_**.jpg", where ** symbolizes any string (i.e. numbers). We'll take care of the rest to make them all Instagram friendly.</p> 
-             
-			 <input type="file" name="myfile" />
-			 
+      
+
+        <progress value="0" max="100" id="uploader"></progress>
+        <input type="file" value="upload" id="fileButton" />
+     
+
+
+
 			 </div>
           </div>
         </div>
@@ -143,5 +149,19 @@
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   </body>
-
+  <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase.js"></script>
+  <script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCTFVfMOiazilDjrWyFsioJFOUZC4FVPdY",
+    authDomain: "software-engineering-project-2.firebaseapp.com",
+    databaseURL: "https://software-engineering-project-2.firebaseio.com",
+    projectId: "software-engineering-project-2",
+    storageBucket: "software-engineering-project-2.appspot.com",
+    messagingSenderId: "479070911932"
+  };
+  firebase.initializeApp(config);
+</script>
+  
+  <script src="/scripts/imageScripts.js"></script>
 </html>

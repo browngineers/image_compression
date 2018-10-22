@@ -9,14 +9,20 @@ const spawn = require("child_process").spawn;
 
 const app = express()
 
+
+
+
+
+
+
 // HBS setup
 const hbs = require('express-handlebars')({
-  extname: '.hbs'
+  extname: '.html'
 });
 
-app.engine('hbs', hbs);
+app.engine('html', hbs);
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'hbs');
+app.set('view engine', 'html');
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(bodyParser.json());

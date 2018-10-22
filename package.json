@@ -22,7 +22,11 @@
     "express": "^4.16.4",
     "express-fileupload": "^1.0.0",
     "express-handlebars": "^3.0.0",
+<<<<<<< HEAD
     "firebase": "^5.5.5",
     "image-downloader": "^3.4.1"
+=======
+    "firebase": "^5.5.5"
+>>>>>>> 0b32245e07ceb68943a7a2a5eea2c54aef73432b
   }
 }
