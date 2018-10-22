@@ -1,6 +1,4 @@
-# image_compression
-project 1 - image compression
-
+# image_compression - Project 1 
 How to run: 
 
 1. Install node.js: https://nodejs.org/en/
